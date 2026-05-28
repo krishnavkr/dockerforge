@@ -83,7 +83,7 @@ Start my FastAPI server using uvicorn:
 ```bash
 uvicorn app.main:app --reload
 ```
-Open your browser and navigate to **`http://localhost:8000`** to launch my developer console!
+Open your browser and click this link: **[http://127.0.0.1:8000](http://127.0.0.1:8000)** (or **[http://localhost:8000](http://localhost:8000)**) to launch my developer console!
 
 ---
 
@@ -98,7 +98,7 @@ I set this up using a **Docker-outside-of-Docker (DooD)** strategy. My `docker-c
 # Spin up my containerized console
 docker-compose up --build -d
 ```
-Once active, visit `http://localhost:8000`. The containerized DockerForge will execute genuine image building on your host machine!
+Once active, click **[http://127.0.0.1:8000](http://127.0.0.1:8000)** (or **[http://localhost:8000](http://localhost:8000)**). The containerized DockerForge will execute genuine image building on your host machine!
 
 ---
 
