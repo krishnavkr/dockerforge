@@ -1,0 +1,25 @@
+# My local git ignore file
+# I use this to make sure I don't commit private credentials, local virtual environments, or compiled files.
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Local Configurations & API Keys
+.env
+.env.local
+
+# Python Compiled Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary Workspace directories used by my agent
+temp_workspace/
+
+# IDE configurations
+.vscode/
+.idea/
+.project
+.pydevproject

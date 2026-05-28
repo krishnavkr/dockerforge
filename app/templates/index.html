@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My DockerForge AI Developer Workspace</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Style sheet -->
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <!-- Background glowing ambient bubbles -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <div class="app-container">
+        <!-- Header Console -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="logo-icon">DF</div>
+                <div class="logo-text">
+                    <h1>DockerForge</h1>
+                    <span>My Autonomous AI Docker Architect</span>
+                </div>
+            </div>
+            
+            <div class="system-status">
+                <div class="status-badge" id="docker-status">
+                    <span class="indicator"></span>
+                    <span class="label">My Docker Daemon: Checking...</span>
+                </div>
+                <div class="status-badge" id="gemini-status">
+                    <span class="indicator"></span>
+                    <span class="label">My Gemini Key: Checking...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Configuration Dashboard -->
+        <section class="config-panel glass-card">
+            <div class="config-row">
+                <div class="input-group flex-3">
+                    <label for="repo-url">Repository I want to Dockerize:</label>
+                    <input type="text" id="repo-url" placeholder="e.g. https://github.com/expressjs/express" autocomplete="off">
+                </div>
+                
+                <div class="input-group flex-2">
+                    <label for="api-key">My Gemini API Key (optional override):</label>
+                    <input type="password" id="api-key" placeholder="Enter key (or leave empty to use server default)">
+                </div>
+
+                <div class="toggle-group">
+                    <label>My Running Mode:</label>
+                    <div class="switch-button">
+                        <button id="mode-real" class="mode-btn">Genuine Run</button>
+                        <button id="mode-sim" class="mode-btn active">Simulation</button>
+                    </div>
+                </div>
+
+                <div class="action-group">
+                    <button id="btn-forge" class="btn-primary">
+                        <span class="icon">⚡</span> Forge Dockerfile
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Workflow Pipeline Tracker -->
+        <section class="pipeline-section glass-card">
+            <div class="pipeline-nodes">
+                <div class="pipeline-node active" id="node-idle">
+                    <div class="node-icon">💤</div>
+                    <div class="node-label">I'm Idle</div>
+                </div>
+                <div class="pipeline-line"></div>
+                <div class="pipeline-node" id="node-scanning">
+                    <div class="node-icon">🔍</div>
+                    <div class="node-label">Cloning & Scanning</div>
+                </div>
+                <div class="pipeline-line"></div>
+                <div class="pipeline-node" id="node-generating">
+                    <div class="node-icon">🧠</div>
+                    <div class="node-label">AI Drafting</div>
+                </div>
+                <div class="pipeline-line"></div>
+                <div class="pipeline-node" id="node-compiling">
+                    <div class="node-icon">⚙️</div>
+                    <div class="node-label">Compiling Image</div>
+                </div>
+                <div class="pipeline-line"></div>
+                <div class="pipeline-node" id="node-healing">
+                    <div class="node-icon">🩹</div>
+                    <div class="node-label">Self Healing</div>
+                </div>
+                <div class="pipeline-line"></div>
+                <div class="pipeline-node" id="node-verifying">
+                    <div class="node-icon">🛡️</div>
+                    <div class="node-label">Verifying Live</div>
+                </div>
+                <div class="pipeline-line"></div>
+                <div class="pipeline-node" id="node-ready">
+                    <div class="node-icon">🚀</div>
+                    <div class="node-label">Ready & Tested</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dual-Pane Workspace Workstation -->
+        <main class="workspace-main">
+            <!-- Left Pane: Code & Code Workspace -->
+            <section class="pane left-pane glass-card">
+                <div class="pane-header">
+                    <div class="tab-selectors">
+                        <button class="tab-btn active" data-tab="dockerfile">Dockerfile</button>
+                        <button class="tab-btn" data-tab="compose">docker-compose.yml</button>
+                        <button class="tab-btn" data-tab="explorer">Project Structure</button>
+                    </div>
+                    <div class="pane-actions" id="code-actions" style="display: none;">
+                        <button id="btn-copy" class="btn-secondary btn-small">Copy Content</button>
+                        <a id="btn-download" class="btn-secondary btn-small" download>Download File</a>
+                    </div>
+                </div>
+                
+                <div class="pane-body">
+                    <!-- Tab: Dockerfile -->
+                    <div class="tab-content active" id="tab-dockerfile">
+                        <pre class="code-container"><code class="fira-code" id="code-dockerfile"># I am waiting for you to trigger a scan above...
+# Once triggered, I will display my custom, AI-engineered Dockerfile here!</code></pre>
+                    </div>
+                    
+                    <!-- Tab: Compose -->
+                    <div class="tab-content" id="tab-compose">
+                        <pre class="code-container"><code class="fira-code" id="code-compose"># I am waiting for you to trigger a scan above...
+# Once triggered, I will display my custom, AI-engineered docker-compose.yml here!</code></pre>
+                    </div>
+                    
+                    <!-- Tab: Explorer -->
+                    <div class="tab-content" id="tab-explorer">
+                        <pre class="code-container"><code class="fira-code" id="code-explorer"># I am waiting for you to trigger a scan above...
+# Once triggered, I will display the scanned codebase file tree here!</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Pane: Terminal Emulator -->
+            <section class="pane right-pane glass-card">
+                <div class="pane-header">
+                    <div class="terminal-title">
+                        <span class="pulse-dot"></span>
+                        <h3>My Agent Terminal Log Console</h3>
+                    </div>
+                    <div class="terminal-controls">
+                        <span class="tech-tag" id="tech-badge">Primary: None</span>
+                        <button id="btn-clear-terminal" class="btn-secondary btn-small">Clear logs</button>
+                    </div>
+                </div>
+                <div class="pane-body terminal-body" id="terminal-screen">
+                    <div class="terminal-line system-welcome">=== WELCOME TO MY DOCKERFORGE AI AGENT CONSOLE ===</div>
+                    <div class="terminal-line system-welcome">I designed this terminal to show you exactly how my agent reasons, clones, builds, debugs, and compiles under the hood.</div>
+                    <div class="terminal-line system-welcome">Provide a repository URL above to watch my self-healing build engine in action!</div>
+                    <!-- Dynamic lines will go here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Main JS Application script -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

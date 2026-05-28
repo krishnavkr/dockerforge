@@ -1,0 +1,22 @@
+# My docker-compose.yml configuration
+# I use this file to quickly orchestrate DockerForge with host daemon mounting
+version: '3.8'
+
+services:
+  dockerforge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-dockerforge-console
+    ports:
+      - "8000:8000"
+    environment:
+      # I read this from my host env configuration
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - ENABLE_SIMULATION_MODE=${ENABLE_SIMULATION_MODE:-false}
+    volumes:
+      # CRITICAL: I mount the host's Docker socket into my container.
+      # This lets the Docker CLI running inside my container issue build/run commands
+      # directly to your host's Docker engine!
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

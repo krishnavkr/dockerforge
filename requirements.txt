@@ -1,0 +1,6 @@
+# I use these packages to power my FastAPI backend, Gemini Agent, and styling engine
+fastapi>=0.115.0
+uvicorn>=0.34.0
+google-genai>=1.3.0
+python-dotenv>=1.0.1
+jinja2>=3.1.0
